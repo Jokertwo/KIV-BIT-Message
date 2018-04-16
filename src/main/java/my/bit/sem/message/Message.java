@@ -8,20 +8,20 @@ public class Message implements Serializable {
 
     private static final long serialVersionUID = -585085161844650095L;
 
-    public static final int MESSAGE = 10, LOGOUT = 20, LOGIN = 0,PUBLIC_KEY = 30;
-
-    private int type;
     private String message;
     private Key key;
+    private MessageType type;
 
-    public Message(int type, String message,Key key) {
+
+    public Message(String message, Key key, MessageType type) {
+        super();
         this.message = message;
-        this.type = type;
         this.key = key;
+        this.type = type;
     }
 
 
-    public int getType() {
+    public MessageType getType() {
         return type;
     }
 
@@ -29,8 +29,9 @@ public class Message implements Serializable {
     public String getMessage() {
         return message;
     }
-    
-    public Key getKey(){
+
+
+    public Key getKey() {
         return key;
     }
 }
