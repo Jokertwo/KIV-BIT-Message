@@ -19,7 +19,7 @@ public class RSAImpl implements RSA {
     private Key privateKey;
     private Key serverKey;
 
-    private static final int BITLENGHT = 2048;
+    private static final int BITLENGHT = 1028;
     private static SecureRandom rnd = new SecureRandom();
 
 
@@ -111,7 +111,7 @@ public class RSAImpl implements RSA {
     public void setServerKey(Key serverKey) {
         this.serverKey = serverKey;
     }
-
+    
 
     public BigInteger encryption(String value) throws NullPointerException {
         return encryption(value, serverKey);

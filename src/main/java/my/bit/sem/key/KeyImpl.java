@@ -1,10 +1,9 @@
 package my.bit.sem.key;
 
-import java.io.Serializable;
 import java.math.BigInteger;
 
 
-public class KeyImpl implements Key,Serializable {
+public class KeyImpl implements Key {
 
     private static final long serialVersionUID = -7744194029578079207L;
     
