@@ -11,13 +11,15 @@ public class Message implements Serializable {
     private String message;
     private Key key;
     private MessageType type;
+    private Operation operation;
 
 
-    public Message(String message, Key key, MessageType type) {
+    public Message(String message, Key key, MessageType type, Operation operation) {
         super();
         this.message = message;
         this.key = key;
         this.type = type;
+        this.operation = operation;
     }
 
 
@@ -33,5 +35,10 @@ public class Message implements Serializable {
 
     public Key getKey() {
         return key;
+    }
+
+
+    public Operation getOperation() {
+        return operation;
     }
 }
